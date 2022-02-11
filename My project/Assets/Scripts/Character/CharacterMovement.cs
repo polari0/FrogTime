@@ -7,7 +7,7 @@ namespace Character
     public class CharacterMovement : MonoBehaviour
     {
         Vector3 mousePosition;
-        internal float moveSpeed = 0.2f;
+        internal float moveSpeed = 0.01f;
         Rigidbody2D rb;
         Vector2 position = new Vector2(0f, 0f);
 

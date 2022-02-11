@@ -5093,6 +5093,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6951354400029054556, guid: 92ee45ff3b722a043ad6300f07a018c4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8720095989065598120, guid: 92ee45ff3b722a043ad6300f07a018c4, type: 3}
       propertyPath: m_Name
       value: Hexagon Flat-Top
