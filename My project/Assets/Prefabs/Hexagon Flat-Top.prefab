@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6951354400029054556}
   - component: {fileID: 3544248347843215644}
   - component: {fileID: 7989028834952048980}
+  - component: {fileID: 4360348574565272835}
   m_Layer: 0
   m_Name: Hexagon Flat-Top
   m_TagString: Untagged
@@ -119,3 +120,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4360348574565272835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8720095989065598120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6e11dee87092c4fa58c3ccdb7a778d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterMovement_Script: {fileID: 3544248347843215644}
+  player: {fileID: 7989028834952048980}
