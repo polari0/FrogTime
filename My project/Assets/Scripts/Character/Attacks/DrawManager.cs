@@ -8,6 +8,10 @@ namespace FrogTime
     {
         internal class DrawManager : MonoBehaviour
         {
+
+            internal static DrawManager instance;
+
+
             private Camera _cam;
             [SerializeField]
             private AttackLine linePrefab;
@@ -15,6 +19,8 @@ namespace FrogTime
             internal const float resolution = 0.1f;
 
             private AttackLine currentLine;
+
+
             void Start()
             {
                 _cam = Camera.main;
@@ -31,8 +37,9 @@ namespace FrogTime
                 if (Input.GetMouseButton(0))
                 {
                     currentLine.SetPosition(mousePos);
-                }
+                } 
             }
         }
     } 
 }
+//This script is what draws the line based on logic Attack Line defines. 

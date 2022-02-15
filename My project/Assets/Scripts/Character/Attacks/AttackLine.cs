@@ -8,6 +8,7 @@ namespace FrogTime
     {
         internal class AttackLine : MonoBehaviour
         {
+
             [SerializeField]
             private LineRenderer _renderer;
 
@@ -15,12 +16,15 @@ namespace FrogTime
             private EdgeCollider2D _collider;
 
             private List<Vector2> _points = new List<Vector2>();
+
             void Start()
             {
                 _collider.transform.position -= transform.position;
             }
 
-            // Update is called once per frame
+            internal int currentPoint;
+
+
             void Update()
             {
 
