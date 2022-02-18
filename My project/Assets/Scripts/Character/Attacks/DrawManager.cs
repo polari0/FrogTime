@@ -12,7 +12,7 @@ namespace FrogTime
             internal static DrawManager instance;
 
 
-            private Camera _cam;
+            private Camera cam;
             [SerializeField]
             private AttackLine linePrefab;
 
@@ -23,12 +23,12 @@ namespace FrogTime
 
             void Start()
             {
-                _cam = Camera.main;
+                cam = Camera.main;
             }
 
             void Update()
             {
-                Vector2 mousePos = _cam.ScreenToWorldPoint(Input.mousePosition);
+                Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
                 if (Input.GetMouseButtonDown(0))
                 {

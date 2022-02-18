@@ -135,6 +135,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterMovement_Script: {fileID: 3544248347843215644}
   player: {fileID: 7989028834952048980}
+  attackBar_script: {fileID: 6130459607709016145, guid: 285c1cf30f09546439d303daee5ef1ad, type: 3}
+  attColDec_Script: {fileID: 0}
+  line: {fileID: 5658264798900527321, guid: 53f67ac0503f96b4386b88479c2e48e8, type: 3}
 --- !u!70 &6120454383327232433
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
