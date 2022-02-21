@@ -36,3 +36,4 @@ namespace FrogTime
         } 
     }
 }
+//This script just fills and empties the attack Bar at constant rate. 

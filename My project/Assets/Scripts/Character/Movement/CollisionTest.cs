@@ -1,6 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
+
+//This script can be Safely ignored For the most part it was test to do some stuff and copy pasted from internet. 
+//It remains to be seen if I do something with it
 namespace FrogTime
 {
     namespace Character
