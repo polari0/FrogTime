@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7989028834952048980}
   - component: {fileID: 4360348574565272835}
   - component: {fileID: 6120454383327232433}
+  - component: {fileID: 3833094143629929584}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -100,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 439e1b58a3b48144bbf096c19150a9cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 0.3
 --- !u!50 &7989028834952048980
 Rigidbody2D:
   serializedVersion: 4
@@ -136,7 +138,6 @@ MonoBehaviour:
   characterMovement_Script: {fileID: 3544248347843215644}
   player: {fileID: 7989028834952048980}
   attackBar_script: {fileID: 6130459607709016145, guid: 285c1cf30f09546439d303daee5ef1ad, type: 3}
-  attColDec_Script: {fileID: 0}
   line: {fileID: 5658264798900527321, guid: 53f67ac0503f96b4386b88479c2e48e8, type: 3}
 --- !u!70 &6120454383327232433
 CapsuleCollider2D:
@@ -154,3 +155,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.85, y: 0.85}
   m_Direction: 0
+--- !u!114 &3833094143629929584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8720095989065598120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6001843b6c4b5d0469898040ff8776f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 8720095989065598120}

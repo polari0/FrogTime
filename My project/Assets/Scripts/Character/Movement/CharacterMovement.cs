@@ -9,6 +9,7 @@ namespace FrogTime
         internal class CharacterMovement : MonoBehaviour
         {
             Vector2 mousePosition;
+            [SerializeField]
             internal float moveSpeed = 0.3f;
             Rigidbody2D rb;
             Vector2 position = new Vector2(0f, 0f);
