@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 
 namespace FrogTime
 {
     namespace Character
     {
-        internal class CharacterMovement : MonoBehaviour
+        internal class CharacterMovement : NetworkBehaviour
         {
             Vector2 mousePosition;
             [SerializeField]

@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 
 namespace FrogTime
 {
     namespace Character
     {
-        public class AttackTeleport : MonoBehaviour
+        public class AttackTeleport : NetworkBehaviour
         {
 
             [SerializeField]
@@ -18,6 +19,8 @@ namespace FrogTime
             [SerializeField]
             private GameObject line;
 
+            private bool canAttack = true;
+
             private float attackDuration = 0.002f;
 
             private void Update()
@@ -26,7 +29,7 @@ namespace FrogTime
             }
             IEnumerator Attack()
             {
-                if (Input.GetMouseButton(0))
+                if (Input.GetMouseButton(0) && canAttack == true)
                 {
                     characterMovement_Script.enabled = false;
                     attackBar_script.attackDurationleft += attackDuration;
@@ -35,11 +38,13 @@ namespace FrogTime
                 }
                 if (Input.GetMouseButtonUp(0) || (attackBar_script.attackDurationleft > attackBar_script.attackDurationMax))
                 {
+                    canAttack = false;
                     attackBar_script.attackDurationleft = 0f;
                     dotweentest_Script.AttackMove();
-                    yield return new WaitForSeconds(3f);
+                    yield return new WaitForSeconds(0.4f);
                     characterMovement_Script.enabled = true;
-                    DestroyObjectDelayed();
+                    yield return new WaitForSeconds(2f);
+                    canAttack = true;
                 }
             }
             //This is basically the meat and butter of the attack and movement system
