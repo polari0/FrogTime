@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace FrogTime
 {
@@ -10,30 +11,31 @@ namespace FrogTime
         {
 
             [SerializeField]
-            private Transform attackBar;
+            private Image attackBar;
 
+            private Slider slider;
 
             internal float attackDurationleft = 0f;
             internal float attackDurationMax = 1f;
 
+            private float fillValue;
 
-            // Start is called before the first frame update
-            void Start()
+            private void Awake()
             {
-
+                slider = GetComponent<Slider>();
             }
-
-            // Update is called once per frame
-            void Update()
+            private void Update()
             {
+                //fillValue = attackDurationleft;
 
+                slider.value = attackDurationMax;
             }
 
             internal void SetBarSize(float sizeNormalized)
             {
-                attackBar.localScale = new Vector3(1f, sizeNormalized, 0f);
+
             }
         } 
     }
 }
-//This script just fills and empties the attack Bar at constant rate. 
+//This script just fills and empties the attack Bar at constant rate. Rate is Defined in attack teleprot Script. 

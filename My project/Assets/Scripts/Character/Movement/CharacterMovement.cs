@@ -32,3 +32,4 @@ namespace FrogTime
         }
     } 
 }
+//Simple script that makes the character move at constant speed towards the mouse position. 

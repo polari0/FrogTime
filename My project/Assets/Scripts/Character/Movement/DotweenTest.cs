@@ -14,25 +14,19 @@ namespace FrogTime
             [SerializeField]
             private Rigidbody2D player;
 
-            private Vector3 _mouseCurrentPos;
+            private Vector3 mouseCurrentPos;
             internal float attackLenght = 3f;
-
-            //Nothing here yet
-            private void Start()
-            {
-
-            }
 
             //Checks the mouse position each frame and turns it to wrorld point. 
             private void Update()
             {
-                _mouseCurrentPos = Input.mousePosition;
-                _mouseCurrentPos = Camera.main.ScreenToWorldPoint(_mouseCurrentPos);
+                mouseCurrentPos = Input.mousePosition;
+                mouseCurrentPos = Camera.main.ScreenToWorldPoint(mouseCurrentPos);
             }
             //Do tween that moves character from current position to mouse position and fast base I still haveto turn this into attack and do some other stuff but it works for testing. 
             internal void AttackMove()
             {
-                player.transform.DOLocalMove(_mouseCurrentPos, 0.2f, false).SetEase(Ease.Flash);
+                player.transform.DOLocalMove(mouseCurrentPos, 0.2f, false).SetEase(Ease.Flash);
             }
         }  
     }
