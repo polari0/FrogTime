@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterMovement_Script: {fileID: 3544248347843215644}
-  dotweentest_Script: {fileID: 0}
+  dotweentest_Script: {fileID: 3833094143629929584}
   attackBar_script: {fileID: 6130459607709016145, guid: 285c1cf30f09546439d303daee5ef1ad, type: 3}
   line: {fileID: 5658264798900527321, guid: 53f67ac0503f96b4386b88479c2e48e8, type: 3}
 --- !u!70 &6120454383327232433
