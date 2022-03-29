@@ -14,12 +14,12 @@ namespace FrogTime
 
             [SerializeField]
             private CharacterMovement characterMovement_Script;
-            [SerializeField]
-            private DotweenTest dotweentest_Script;
+            //[SerializeField]
+            //private DotweenTest dotweentest_Script;
             [SerializeField]
             private AttackBar attackBar_script;
-            [SerializeField]
-            private GameObject line;
+            //[SerializeField]
+            //private GameObject line;
 
             private bool canAttack = true;
 
@@ -36,16 +36,19 @@ namespace FrogTime
             {
                 if (Input.GetMouseButton(0) && canAttack == true)
                 {
-                    characterMovement_Script.enabled = false;
+                    Debug.Log("Pressed");
+                    //characterMovement_Script.enabled = false;
                     attackBar_script.attackDurationMax -= attackDuration;
+                    characterMovement_Script.moveSpeed = 1f;
                 }
                 if (Input.GetMouseButtonUp(0) || (attackBar_script.attackDurationMax <= 0))
                 {
                     canAttack = false;
-                    dotweentest_Script.AttackMove();
+                    //dotweentest_Script.AttackMove();
                     StartCoroutine(RegenerateAttackBar());
-                    yield return new WaitForSeconds(0.4f);
-                    characterMovement_Script.enabled = true;
+                    characterMovement_Script.moveSpeed = 0.1f;
+                    yield return null;
+                    //characterMovement_Script.enabled = true;
                     canAttack = true;
                 }
             }
