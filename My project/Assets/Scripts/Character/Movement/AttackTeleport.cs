@@ -46,10 +46,10 @@ namespace FrogTime
                     canAttack = false;
                     //dotweentest_Script.AttackMove();
                     StartCoroutine(RegenerateAttackBar());
-                    characterMovement_Script.moveSpeed = 0.1f;
+                    characterMovement_Script.moveSpeed = 0.3f;
+                    canAttack = true;
                     yield return null;
                     //characterMovement_Script.enabled = true;
-                    canAttack = true;
                 }
             }
 
