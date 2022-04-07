@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 namespace FrogTime
 {
-    namespace Character
-    {
         public class AttackBar : MonoBehaviour
         {
 
@@ -36,6 +34,5 @@ namespace FrogTime
 
             }
         } 
-    }
 }
 //This script just fills and empties the attack Bar at constant rate. Rate is Defined in attack teleprot Script. 

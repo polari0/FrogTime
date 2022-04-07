@@ -4,14 +4,13 @@ using UnityEngine;
 
 namespace FrogTime
 {
-    internal class EnemyAttack : EnemyVariables
+    internal class CharacterStats : CharacterVariables
     {
         private void Awake()
         {
-            healt = 10;
-            damage = 1;
+            
+            characterHealt = 20;
+            characterDamage = 2;
         }
-
-
     } 
 }

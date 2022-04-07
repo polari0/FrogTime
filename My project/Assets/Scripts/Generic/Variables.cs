@@ -6,22 +6,24 @@ namespace FrogTime
 {
     internal class Variables : MonoBehaviour
     {
-        //This is more of an name than actual class 
+        //Enemy Variables
+        internal int enemyHealt;
+        internal int enemyDamage;
+    }
+    internal class CharacterVariables : MonoBehaviour
+    {
+       //Character Variables 
+       internal int characterHealt;
+       internal float characterSpeed;
+       internal int characterDamage;
+       internal static float characterMoveSpeed = 0.1f;
+       internal bool hasMovementSpeedChanged = false;
+       internal void ChangeMovementSpeed()
+        {
+            if(hasMovementSpeedChanged == false)
+            {
+		        hasMovementSpeedChanged = true; 
+            }
+       }
     } 
-
-    internal class EnemyVariables : MonoBehaviour
-    {
-        internal int healt;
-
-        internal float damage;
-    }
-
-    internal class CharacterVariables
-    {
-        internal int healt;
-
-        internal float speed;
-
-        internal float damage;
-    }
 }

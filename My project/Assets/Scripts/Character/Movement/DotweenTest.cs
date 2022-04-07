@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
-using Unity.Netcode;
 
 namespace FrogTime
 {
     namespace Character
     {
-        public class DotweenTest : NetworkBehaviour
+        public class DotweenTest : MonoBehaviour
         {
             //References to required components and other variables 
             [SerializeField]

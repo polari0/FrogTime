@@ -1,27 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.Netcode;
 
 //SUGGEST NAME CHANGES PLEASE
 
 namespace FrogTime
 {
-    namespace Character
-    {
-        public class AttackTeleport : NetworkBehaviour
+        internal class CharacterAttack : MonoBehaviour
         {
-
-            [SerializeField]
-            private CharacterMovement characterMovement_Script;
             //[SerializeField]
             //private DotweenTest dotweentest_Script;
             [SerializeField]
             private AttackBar attackBar_script;
-            //[SerializeField]
-            //private GameObject line;
+            [SerializeField]
+            private CharacterMovement movement_script;
 
-            private bool canAttack = true;
+            internal bool canAttack = true;
 
             //These 2 controll how fast and ofter you attack 
             private float attackDuration = 0.002f;
@@ -36,17 +30,17 @@ namespace FrogTime
             {
                 if (Input.GetMouseButton(0) && canAttack == true)
                 {
-                    Debug.Log("Pressed");
                     //characterMovement_Script.enabled = false;
                     attackBar_script.attackDurationMax -= attackDuration;
-                    characterMovement_Script.moveSpeed = 1f;
+                    movement_script.moveSpeed = 1f;
+                    Debug.Log(movement_script.moveSpeed);
                 }
                 if (Input.GetMouseButtonUp(0) || (attackBar_script.attackDurationMax <= 0))
                 {
                     canAttack = false;
                     //dotweentest_Script.AttackMove();
                     StartCoroutine(RegenerateAttackBar());
-                    characterMovement_Script.moveSpeed = 0.3f;
+                    movement_script.moveSpeed = 0.1f;
                     canAttack = true;
                     yield return null;
                     //characterMovement_Script.enabled = true;
@@ -69,5 +63,4 @@ namespace FrogTime
                 }
             }
         }  
-    }
 }
