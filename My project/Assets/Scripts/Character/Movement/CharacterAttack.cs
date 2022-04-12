@@ -16,6 +16,7 @@ namespace FrogTime
             private CharacterMovement movement_script;
 
             internal bool canAttack = true;
+            internal bool isAttacking = false;
 
             //These 2 controll how fast and ofter you attack 
             private float attackDuration = 0.002f;
@@ -30,13 +31,14 @@ namespace FrogTime
             {
                 if (Input.GetMouseButton(0) && canAttack == true)
                 {
+                    isAttacking = true;
                     //characterMovement_Script.enabled = false;
                     attackBar_script.attackDurationMax -= attackDuration;
                     movement_script.moveSpeed = 1f;
-                    Debug.Log(movement_script.moveSpeed);
                 }
                 if (Input.GetMouseButtonUp(0) || (attackBar_script.attackDurationMax <= 0))
                 {
+                    isAttacking = false;
                     canAttack = false;
                     //dotweentest_Script.AttackMove();
                     StartCoroutine(RegenerateAttackBar());

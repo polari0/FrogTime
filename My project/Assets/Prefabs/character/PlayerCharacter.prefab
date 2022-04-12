@@ -134,8 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e6e11dee87092c4fa58c3ccdb7a778d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackBar_script: {fileID: 6130459607709016145, guid: 285c1cf30f09546439d303daee5ef1ad, type: 3}
-  movement_script: {fileID: 0}
+  attackBar_script: {fileID: 0}
+  movement_script: {fileID: 3544248347843215644}
 --- !u!70 &6120454383327232433
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

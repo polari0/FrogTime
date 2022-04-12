@@ -4,12 +4,6 @@ using UnityEngine;
 
 namespace FrogTime
 {
-    internal class Variables : MonoBehaviour
-    {
-        //Enemy Variables
-        internal int enemyHealt;
-        internal int enemyDamage;
-    }
     internal class CharacterVariables : MonoBehaviour
     {
        //Character Variables 

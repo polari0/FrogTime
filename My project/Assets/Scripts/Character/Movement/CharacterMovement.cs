@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace FrogTime
 {
-        internal class CharacterMovement : CharacterVariables
+        internal class CharacterMovement : CharacterStats
         {
             //[SerializeField]
             //private CharacterVariables variables_Script;
