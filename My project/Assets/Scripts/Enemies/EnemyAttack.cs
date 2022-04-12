@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Polarith.AI.Move;
 
 namespace FrogTime
 {
@@ -11,8 +12,22 @@ namespace FrogTime
         [SerializeField]
         private CharacterAttack attack_Script;
 
+        [SerializeField]
+        AIMPerceiver AIM_Perciever;
+
         public int enemyDamage = 1;
         public int enemyHealt = 10;
+
+        private void Awake()
+        {
+            
+        }
+
+        private void Start()
+        {
+            variables_Script = FindObjectOfType<CharacterVariables>();
+            attack_Script = FindObjectOfType<CharacterAttack>();
+        }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {

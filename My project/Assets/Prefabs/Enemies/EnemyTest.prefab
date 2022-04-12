@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2611306956875080814}
   - component: {fileID: 4953881676491567280}
   - component: {fileID: 7680524344351925158}
+  - component: {fileID: 3220562530855609336}
   m_Layer: 0
   m_Name: EnemyTest
   m_TagString: Enemy
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_Sprite: {fileID: 7482667652216324306, guid: 35b5c7e91ccb9a1488c47626b2f9235b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -163,9 +164,9 @@ MonoBehaviour:
     tab3: 0
     tab4: 0
   advancedInspector: 0
-  FilteredEnvironments: []
-  GameObjects:
-  - {fileID: 8720095989065598120, guid: 92ee45ff3b722a043ad6300f07a018c4, type: 3}
+  FilteredEnvironments:
+  - Target
+  GameObjects: []
   velocityGizmo:
     Enabled: 0
     Color: {r: 0.5, g: 0.5, b: 1, a: 1}
@@ -200,7 +201,7 @@ MonoBehaviour:
     Prediction: 0
     PredictionMagnitude: 0
     InnerRadius: 0
-    OuterRadius: 20
+    OuterRadius: 40
     RadiusMapping: 2
     ForEachReceptor: 0
 --- !u!114 &2611306956875080801
@@ -285,3 +286,22 @@ MonoBehaviour:
   attack_Script: {fileID: 4360348574565272835, guid: 92ee45ff3b722a043ad6300f07a018c4, type: 3}
   enemyDamage: 1
   enemyHealt: 10
+--- !u!114 &3220562530855609336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2611306956875080811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 336943168, guid: b26ce4b80a42c6441af375612ff69ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  environmentFoldout: 0
+  SteeringPerceiver: {fileID: 3974792328619890966, guid: 22f27a08fb14f0549bd4b2713af539cd, type: 3}
+  ObjectTag: Untagged
+  Range: -1
+  rangeGizmo:
+    Enabled: 0
+    Color: {r: 0.2627451, g: 0.79607844, b: 0.24705882, a: 1}

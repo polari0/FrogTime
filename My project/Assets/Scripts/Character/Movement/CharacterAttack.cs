@@ -22,7 +22,13 @@ namespace FrogTime
             private float attackDuration = 0.002f;
             private float attackRegeneration = 0.002f;
 
-            private void Update()
+        private void Awake()
+        {
+            attackBar_script = FindObjectOfType<AttackBar>();
+            movement_script = FindObjectOfType<CharacterMovement>();
+        }
+
+        private void Update()
             {
                 StartCoroutine(Attack());
             }

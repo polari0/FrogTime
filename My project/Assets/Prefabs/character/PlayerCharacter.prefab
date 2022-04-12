@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4360348574565272835}
   - component: {fileID: 6120454383327232433}
   - component: {fileID: 1388661689135070898}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerCharacter
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_Sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackBar_script: {fileID: 0}
-  movement_script: {fileID: 3544248347843215644}
+  movement_script: {fileID: 0}
 --- !u!70 &6120454383327232433
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

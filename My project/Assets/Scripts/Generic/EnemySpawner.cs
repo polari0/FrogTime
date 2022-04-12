@@ -1,16 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Polarith.AI.Move;
 
 namespace FrogTime
 {
     public class EnemySpawner : MonoBehaviour
-    {
+    { 
         [SerializeField]
         List<GameObject> spawnpool;
         [SerializeField]
         List<GameObject> positions;
-        internal void SpawFromLocation()
+
+        public float spawnTimer = 3f;
+        private float EnemyCount = 3;
+
+        [SerializeField]
+        AIMEnvironment AIM_Script;
+
+        int roundCount = 0;
+
+        private void Awake()
+        {
+            StartCoroutine(StartSpawning());
+        }
+
+        private void Update()
+        {
+            if (roundCount == 11)
+            {
+                StopCoroutine(StartSpawning());
+            }
+        }
+
+        internal void SpawnFromLocation()
         {
             int randomEnemy;
             GameObject EnemyToSpawn;
@@ -25,12 +48,22 @@ namespace FrogTime
             Instantiate(EnemyToSpawn, positions[SpawnPos].transform.position, transform.rotation);
             //This function spawn the tears at Angel positions. Angel positions are stored in list and i take random index of that list to choose the position to spawn the tear. 
         }
-
-        internal IEnumerator StartSpawnCourutine()
+        private IEnumerator StartSpawning()
         {
-            SpawnFromLocation();
-            yield return new WaitForSeconds(.1f);
-
+            while (roundCount <= 10)
+            {
+                for (int i = 0; i < EnemyCount; i++)
+                {
+                    SpawnFromLocation();
+                    AIM_Script.UpdateLayerGameObjects();
+                    yield return new WaitForSeconds(spawnTimer); 
+                }
+                spawnTimer -= 0.2f;
+                roundCount++;
+                EnemyCount++; 
+                yield return new WaitForSeconds(5f);
+            }
+            
         }
     } 
 }
