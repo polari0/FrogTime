@@ -13,18 +13,23 @@ namespace FrogTime
         private CharacterAttack attack_Script;
 
         [SerializeField]
-        AIMPerceiver AIM_Perciever;
+        AIMSteeringFilter steering_component;
+        [SerializeField]
+        AIMSteeringPerceiver perciever_component;
 
         public int enemyDamage = 1;
         public int enemyHealt = 10;
 
         private void Awake()
         {
-            
+            steering_component = GetComponent<AIMSteeringFilter>();
+            perciever_component = FindObjectOfType<AIMSteeringPerceiver>();
+
         }
 
         private void Start()
         {
+            steering_component.SteeringPerceiver = perciever_component;
             variables_Script = FindObjectOfType<CharacterVariables>();
             attack_Script = FindObjectOfType<CharacterAttack>();
         }

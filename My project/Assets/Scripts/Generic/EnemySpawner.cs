@@ -19,6 +19,8 @@ namespace FrogTime
         AIMEnvironment AIM_Script;
 
         int roundCount = 0;
+        [SerializeField]
+        int maxRounds = 10;
 
         private void Awake()
         {
@@ -27,7 +29,7 @@ namespace FrogTime
 
         private void Update()
         {
-            if (roundCount == 11)
+            if (roundCount == maxRounds + 1)
             {
                 StopCoroutine(StartSpawning());
             }
@@ -50,7 +52,7 @@ namespace FrogTime
         }
         private IEnumerator StartSpawning()
         {
-            while (roundCount <= 10)
+            while (roundCount <= maxRounds)
             {
                 for (int i = 0; i < EnemyCount; i++)
                 {
