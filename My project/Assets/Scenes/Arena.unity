@@ -172,10 +172,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4704265034792168277, guid: 7e6a907c0632b0a4fb595c349c7d8537, type: 3}
-      propertyPath: m_Name
-      value: DeathMessage
-      objectReference: {fileID: 0}
     - target: {fileID: 8056880958888178546, guid: 7e6a907c0632b0a4fb595c349c7d8537, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -254,11 +250,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e6a907c0632b0a4fb595c349c7d8537, type: 3}
---- !u!1 &550708178 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 328124670419227360, guid: 7e6a907c0632b0a4fb595c349c7d8537, type: 3}
-  m_PrefabInstance: {fileID: 340787351}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &851083829
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +315,6 @@ MonoBehaviour:
   - {fileID: 69377126}
   spawnTimer: 3
   AIM_Script: {fileID: 1482787491}
-  maxRounds: 10
 --- !u!114 &903978259 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8056880959640909578, guid: 7e6a907c0632b0a4fb595c349c7d8537, type: 3}
@@ -623,18 +613,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1388661689135070898, guid: 92ee45ff3b722a043ad6300f07a018c4, type: 3}
-      propertyPath: death_Message
-      value: 
-      objectReference: {fileID: 550708178}
-    - target: {fileID: 1388661689135070898, guid: 92ee45ff3b722a043ad6300f07a018c4, type: 3}
-      propertyPath: characterAttack_Script
-      value: 
-      objectReference: {fileID: 1651719801}
-    - target: {fileID: 1388661689135070898, guid: 92ee45ff3b722a043ad6300f07a018c4, type: 3}
-      propertyPath: characterMovement_script
-      value: 
-      objectReference: {fileID: 1332855763}
     - target: {fileID: 4360348574565272835, guid: 92ee45ff3b722a043ad6300f07a018c4, type: 3}
       propertyPath: movement_script
       value: 
