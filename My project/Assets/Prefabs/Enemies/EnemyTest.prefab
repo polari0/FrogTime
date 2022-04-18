@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: -2048606044, guid: b26ce4b80a42c6441af375612ff69ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1
+  Speed: 3
   ObjectiveAsSpeed: -1
   Context: {fileID: 2611306956875080810}
 --- !u!114 &2611306956875080814
@@ -284,6 +284,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variables_Script: {fileID: 3544248347843215644, guid: 92ee45ff3b722a043ad6300f07a018c4, type: 3}
   attack_Script: {fileID: 4360348574565272835, guid: 92ee45ff3b722a043ad6300f07a018c4, type: 3}
+  steering_component: {fileID: 0}
+  perciever_component: {fileID: 0}
   enemyDamage: 1
   enemyHealt: 10
 --- !u!114 &3220562530855609336
