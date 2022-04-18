@@ -284,10 +284,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variables_Script: {fileID: 3544248347843215644, guid: 92ee45ff3b722a043ad6300f07a018c4, type: 3}
   attack_Script: {fileID: 4360348574565272835, guid: 92ee45ff3b722a043ad6300f07a018c4, type: 3}
-<<<<<<< Updated upstream
-=======
-  pointCounter_script: {fileID: 0}
->>>>>>> Stashed changes
   steering_component: {fileID: 0}
   perciever_component: {fileID: 0}
   enemyDamage: 1
