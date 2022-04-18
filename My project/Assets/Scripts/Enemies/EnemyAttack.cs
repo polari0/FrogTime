@@ -11,6 +11,8 @@ namespace FrogTime
         private CharacterVariables variables_Script;
         [SerializeField]
         private CharacterAttack attack_Script;
+        [SerializeField]
+        private PointCounter pointCounter_script;
 
         [SerializeField]
         AIMSteeringFilter steering_component;
@@ -32,6 +34,7 @@ namespace FrogTime
             steering_component.SteeringPerceiver = perciever_component;
             variables_Script = FindObjectOfType<CharacterVariables>();
             attack_Script = FindObjectOfType<CharacterAttack>();
+            pointCounter_script = FindObjectOfType<PointCounter>();
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -53,6 +56,7 @@ namespace FrogTime
         {
             if (enemyHealt <= 0)
             {
+                pointCounter_script.UpdateScore();
                 Destroy(this.gameObject);
             }
         }
