@@ -43,12 +43,12 @@ namespace FrogTime
             {
                 variables_Script.characterHealt -= enemyDamage;
                 Debug.Log(variables_Script.characterHealt + "this is character healt");
-                Debug.Log(attack_Script.isAttacking);
+                //Debug.Log(attack_Script.isAttacking);
             }
             else if (collision.tag == "Player" && attack_Script.isAttacking == true)
             {
                 enemyHealt -= variables_Script.characterDamage;
-                Debug.Log(enemyHealt + "this is enemy healt");
+                //Debug.Log(enemyHealt + "this is enemy healt");
             }
         }
 

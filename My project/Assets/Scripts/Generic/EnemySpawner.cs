@@ -17,8 +17,10 @@ namespace FrogTime
 
         [SerializeField]
         AIMEnvironment AIM_Script;
+        [SerializeField]
+        PointCounter pointCounter_Script;
 
-        int roundCount = 0;
+        internal int roundCount = 0;
         [SerializeField]
         int maxRounds = 10;
 
@@ -33,6 +35,7 @@ namespace FrogTime
             {
                 StopCoroutine(StartSpawning());
             }
+
         }
 
         internal void SpawnFromLocation()
@@ -58,6 +61,7 @@ namespace FrogTime
                 {
                     SpawnFromLocation();
                     AIM_Script.UpdateLayerGameObjects();
+                    pointCounter_Script.UpdateRoundCount();
                     yield return new WaitForSeconds(spawnTimer); 
                 }
                 spawnTimer -= 0.2f;

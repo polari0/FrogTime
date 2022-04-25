@@ -30,7 +30,7 @@ namespace FrogTime
 
         private void Update()
             {
-                StartCoroutine(Attack());
+                StartCoroutine(Attack()); 
             }
             //Checks if you can attack, and runs the logic on how often you can attack Im pretty sure there are ways to optimize this but that is for later me to puzzel about.
             IEnumerator Attack()
